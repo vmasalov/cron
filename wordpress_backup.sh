@@ -20,16 +20,10 @@ if [ ! -d $TARGET_DIR ];
 fi
 
 # Create output directory;
-if [ ! -d $OUTPUT_DIR ];
-  then
-  mkdir $OUTPUT_DIR
-  chmod 640 $OUTPUT_DIR
-fi
-
 OUTPUT_PATH=$OUTPUT_DIR'/'`date +"%m_%d_%Y_%H_%M"`
 if [ ! -d $OUTPUT_PATH ];
   then
-  mkdir $OUTPUT_PATH
+  mkdir -p $OUTPUT_PATH
 fi
 
 ### Archive project files
